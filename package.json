@@ -1,0 +1,20 @@
+{
+  "name": "rest-api-basic",
+  "version": "1.0.0",
+  "description": "Create an API using nodeJS, ExpressJS, &amp; MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triyanarief/rest-api-basic.git"
+  },
+  "keywords": [],
+  "author": "Triyan Arief Wibowo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/triyanarief/rest-api-basic/issues"
+  },
+  "homepage": "https://github.com/triyanarief/rest-api-basic#readme"
+}
