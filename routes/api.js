@@ -11,7 +11,7 @@ router.get('/doctors', (req, res, next) => {
 router.post('/doctors', (req, res, next) => {
   Doctor.create(req.body).then((doctor) => {
       res.send(doctor);
-  });
+  }).catch(next);
 });
 
 // update a doctor in the db
