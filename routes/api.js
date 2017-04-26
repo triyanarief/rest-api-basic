@@ -16,7 +16,11 @@ router.post('/doctors', (req, res, next) => {
 
 // update a doctor in the db
 router.put('/doctors/:id', (req, res, next) => {
-    res.send({type: 'PUT'});
+  Doctor.findByIdAndUpdate({_id: req.params.id}, req.body).then(() => {
+      Doctor.findOne({_id: req.params.id}).then((doctor) => {
+          res.send(doctor);
+      });
+  }).catch(next);
 });
 
 // delete a doctor from the db
