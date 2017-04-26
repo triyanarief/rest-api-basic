@@ -8,7 +8,12 @@ router.get('/doctors', (req, res) => {
 
 // add a new doctor to the db
 router.post('/doctors', (req, res) => {
-    res.send({type: 'POST'});
+  console.log('You made a POST request: ', req.body);
+  res.send({
+      type: 'POST',
+      name: req.body.name,
+      rank: req.body.rank
+  });
 });
 
 // update a doctor in the db
