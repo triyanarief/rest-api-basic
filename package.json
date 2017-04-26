@@ -4,7 +4,7 @@
   "description": "Create an API using nodeJS, ExpressJS, &amp; MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/triyanarief/rest-api-basic/issues"
   },
-  "homepage": "https://github.com/triyanarief/rest-api-basic#readme"
+  "homepage": "https://github.com/triyanarief/rest-api-basic#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
