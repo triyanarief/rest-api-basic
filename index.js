@@ -10,6 +10,9 @@ const app = express();
 mongoose.connect('mongodb://localhost/thedoctor');
 mongoose.Promise = global.Promise;
 
+//set up static files
+app.use(express.static('public'));
+
 // use body-parser middleware
 app.use(bodyParser.json());
 
