@@ -16,3 +16,14 @@ run
 
 ### POST data
 Manually post data with POSTMAN
+
+### REST API
+
+API basic routes:
+
+|       Route      |  HTTP   | Description |
+|------------------|---------|-------------|
+|/api/doctors/       |   GET   | Get all Doctors data by geolocation |
+|/api/doctors        |   POST  | Post new Doctor |
+|/api/doctors/:id    |  DELETE | Delete the Doctor by Id |
+|/api/doctors/:id    |    PUT  | Update Doctor data by Id |
