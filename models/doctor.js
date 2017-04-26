@@ -9,7 +9,7 @@ const DoctorSchema = new Schema({
     },
     rank: {
         type: String
-    }
+    },
     available: {
         type: Boolean,
         default: false

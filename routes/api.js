@@ -1,5 +1,6 @@
 const express = require ('express');
 const router = express.Router();
+const Doctor = require('../models/doctor');
 
 // get a list of doctor from the db
 router.get('/doctors', (req, res) => {
@@ -8,11 +9,8 @@ router.get('/doctors', (req, res) => {
 
 // add a new doctor to the db
 router.post('/doctors', (req, res) => {
-  console.log('You made a POST request: ', req.body);
-  res.send({
-      type: 'POST',
-      name: req.body.name,
-      rank: req.body.rank
+  Doctor.create(req.body).then((doctor) => {
+      res.send(doctor);
   });
 });
 
