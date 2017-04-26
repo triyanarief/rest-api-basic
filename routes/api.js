@@ -4,7 +4,15 @@ const Doctor = require('../models/doctor');
 
 // get a list of doctor from the db
 router.get('/doctors', (req, res, next) => {
-    res.send({type: 'GET'});
+  /* Doctor.find({}).then((doctors) => {
+      res.send(doctors);
+  }); */
+  Doctor.geoNear(
+      {type: 'Point', coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)]},
+      {maxDistance: 100000, spherical: true}
+  ).then(function(doctors){
+      res.send(doctors);
+  }).catch(next);
 });
 
 // add a new doctor to the db
